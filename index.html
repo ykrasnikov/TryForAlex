@@ -1,125 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Bootstrap CSS                                                                                       Bootstrap CSS  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title> Drop Down Sidebar Menu | Technical Library </title>
     <link rel="stylesheet" href="style.css">
-    <title>Latitude</title>
-</head>
-
-<body class="body">
-    <div class="containter">
-        <!-- navbar                                                                                          navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-            <a class="navbar-brand my_brand" href="./">Latitude</a>
-            <!-- button toggler                                                                    toggler button-->
-            <button class="navbar-toggler custom_toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- navbar Menue                                                                        navbar Menue -->
-            <div class="collapse navbar-collapse my_menu" id="navbarMenu">
-                <ul class="d-flex align-items-end navbar-nav ml-auto">
-                    <li class="nav-item dropdown  ">
-                        <a class="nav-link dropdown-toggle" href="pages/temp.html" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Plots
-                        </a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item my_dropdown " href="pages/temp.html">Max Temperature</a>
-                            <a class="dropdown-item my_dropdown" href="pages/humidity.html">Humidity</a>
-                            <a class="dropdown-item my_dropdown" href="pages/clouds.html">Cloudliness</a>
-                            <a class="dropdown-item my_dropdown" href="pages/wind.html">Wind Speed</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/comparison.html">Comparison </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/data.html">Data</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- 1st Row                                                                                1st  Row-->
-        <div class="row justify-content-center">
-            <!-- 1.1column                                                                   1.1column -->
-            <div class="col-lg-6 offset-md-1 col-md-12 r1_c1">
-                <section>
-                    <!-- 1.1 column Header                                       1.1 column Header-->
-                    <h1 class="p1h1">Summary: Latitude vs. Weather</h1>
-                    <hr>
-                    <a  href="pages/temp.html ">
-                        <figure class="fig1_p1">
-                            <img src="images/temp_lat.png" class="rounded img_p1 " alt="temp vs latitude">
-                            <figcaption>
-                            Fig.1 Temperature vs. Latitude
-                            </figcaption>
-                        </figure>
-                    <a>
-                    <p class="p1p1">"Latitude" project is looking into weather changes related to latitude change.
-                        Weather data was pulled from OpenWeatherMap API
-                        over 500 cities reandomly generated across the globe.
-                    </p>
-                    <p class="p1p1"> Pyhton library Matplotlib was used to plot temperature, humidity, cloudeliness and
-                        wind speed vs. latitude.
-                        Purpose of this site is to provide analysis and data visualization of findings </p>
-                </section>
-            </div>
-            <!-- 1.2column                                                         1.2column-->
-            <div class="col-lg-3 col-md-12 align-self-center r1_c2">
-                <section>
-                    <h1 class="p1h2">Visualizations
-                    </h1>
-                    <hr>
-                    <!-- pictures for 1.2 columns                                            -->
-                    <a href="pages/temp.html">
-                        <figure class="fig_p2">
-                            <img src="images/temp_lat.png" class="rounded  img_p2" alt="temp vs latitude">
-                            <figcaption>
-                                Temperature
-                            </figcaption>
-                        </figure>
-                    </a>
-                    <a href="pages/humidity.html">
-                        <figure class="fig_p2">
-                            <img src="images/hum_lat.png" class="rounded  img_p2" alt="humidity vs latitude">
-                            <figcaption>
-                                Humidity
-                            </figcaption>
-                        </figure>
-                    </a>
-                    <a href="pages/clouds.html">
-                        <figure class="fig_p2">
-                            <img src="images/cloud_lat.png" class="rounded  img_p2" alt="cloudeliness vs latitude">
-                            <figcaption>
-                                Cloudliness
-                            </figcaption>
-                        </figure>
-                    </a>
-                    <a href="pages/wind.html">
-                        <figure class="fig_p2">
-                            <img src="images/wind_lat.png" class="rounded  img_p2" alt="wind vs latitude">
-                            <figcaption>
-                                Wind Speed
-                            </figcaption>
-                        </figure>
-                    </a>
-
-                </section>
-            </div>
-
-        </div>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name">Technical Library</span>
     </div>
-    <!-- Separate Popper and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <ul class="nav-links">
+      <li>
+        <a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/GOVERNANCE-MATERIAL.aspx">
+          <span class="link_name">Governace Material</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Power Tongs</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <span class="link_name">Power Tongs</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Eckel-Power-Tongs.aspx"target="_blank">Eckel</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Mccoy-Power-Tongs.aspx"target="_blank">Mccoy</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Staar-Power-Tongs.aspx"target="_blank">Staar</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Scorpion-Power-Tongs.aspx"target="_blank">Scorpion</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Teda-Power-Tongs.aspx"target="_blank">TEDA</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Weatherford-Power-Tongs.aspx"target="_blank">Weatherford</a></li>
+          <li><a href="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/Miscellaneous%20Components-Power-Tongs.aspx"target="_blank">Tong Components</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <span class="link_name">Power Units</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Power Units</a></li>
+          <li><a href="#"target="_blank">Diesel</a></li>
+          <li><a href="#"target="_blank">Electric</a></li>
+          <li><a href="#"target="_blank">Other</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <span class="link_name">Handling Equipment</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Handling Equipment</a></li>
+          <li><a href="#"target="_blank">Elevators</a></li>
+          <li><a href="#"target="_blank">Single Joint Elevators</a></li>
+          <li><a href="#"target="_blank">Hand Slips</a></li>
+          <li><a href="#"target="_blank">HCSs and Bushings</a></li>
+          <li><a href="#"target="_blank">Apaptors</a></li>
+          <li><a href="#"target="_blank">Power Slips</a></li>
+          <li><a href="#"target="_blank">Casing Spider / Elevators</a></li>
+          <li><a href="#"target="_blank">Bails / Links</a></li>
+          <li><a href="#"target="_blank">Control Panels</a></li>
+          <li><a href="#"target="_blank">Safety Clamps</a></li>
+          <li><a href="#"target="_blank">Thread Protectors</a></li>
+          <li><a href="#"target="_blank">Stabbing Guides</a></li>
+          <li><a href="#"target="_blank">Drifts</a></li>
+          <li><a href="#"target="_blank">Lifting Equipment</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="iocn-link">
+          <a href="#">
+            <span class="link_name">Manual Tongs</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Manual Tongs</a></li>
+          <li><a href="#"target="_blank">HT,SB,F,B,C Type Rig Tongs</a></li>
+          <li><a href="#"target="_blank">Petol Bull Tongs</a></li>
+          <li><a href="#"target="_blank">Petol SureGrip Tongs</a></li>
+          <li><a href="#"target="_blank">Tyke K / Kelco Tubing Tongs</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="iocn-link">
+          <a href="#">
+            <span class="link_name">Torque Monitoring Systems</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Torque Monitoring Systems</a></li>
+          <li><a href="#"target="_blank">TORQ-TEK</a></li>
+          <li><a href="#"target="_blank">MCCOY</a></li>
+          <li><a href="#"target="_blank">WINCATT</a></li>
+          <li><a href="#"target="_blank">CT3000</a></li>
+        </ul>
+      </li>
+      <li>
+
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+  <iframe src="https://parkerdrilling.sharepoint.com/sites/GlobalTRSResultsOpportunities/SitePages/Technical%20Library%20Pages/GOVERNANCE-MATERIAL.aspx" width="1700" height="1200"></iframe>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 
 </body>
-
 </html>
